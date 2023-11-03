@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Educational Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="courses.html">دوره ها</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="slideshow">
+        <div class="slideshow-container">
+            <!-- <div class="mySlides fade">
+                <img src="images/page1.jpg" alt="Image 1">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/page2.jpg" alt="Image 2">
+            </div>-->
+            <div class="mySlides fade">
+                <img src="images/Slider_Dsk_2_KGptTNQ.webp" alt="Image 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/Slider_Dsk_3_RPy7Puc.webp" alt="Image 2">
+            </div>
+    
+        </div>
+    </section>
+    
+    <section id="home">
+        <div id="hero">
+            <h1></h1>
+            <p>Empowering learners with knowledge.</p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Available Courses</h2>
+        <div class="course">
+            <h3>Course 1: Subject Name</h3>
+            <p>Description of the course.</p>
+        </div>
+        <div class="course">
+            <h3>Course 2: Subject Name</h3>
+            <p>Description of the course.</p>
+        </div>
+    </section>
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <section id="contact">
+        <div class="contact">
+        <h1 id="h1co">تماس با ما</h1>
+        <a href="t.me/Amk_Lotus" class="fa fa-telegram"></a>
+        <a href="www.instagram.com/amirehsan_k" class="fa fa-instagram"></a>
+        <address>
+            <a href="mailto:contact@yourwebsite.com">Amirehsan.Kohannasab@yahoo.com</a>: ایمیل<br>
+            Email: <a href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a><br>
+            Phone: +123-456-7890
+        </address>
+    </div>
+    </section>
+
+    <section id="filler">
+        <div style="padding-bottom: 10px;">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; designed by Amireshan Kohannasab</p>
+    </footer>
+</body>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); 
+    }
+</script>
+
+</html>
+
