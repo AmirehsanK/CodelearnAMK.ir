@@ -11,8 +11,8 @@
         <nav>
             <ul>
                 <li><a href="index.html">صفحه اصلی</a></li>
-                <li><a href="courses.html">دوره ها</a></li>
-                <li><a href="contact.html">تماس با ما</a></li>
+                <li><a id="coursebutton">دوره ها</a></li>
+                <li><a id="contactbutton">تماس با ما</a></li>
             </ul>
         </nav>
     </header>
@@ -39,32 +39,41 @@
     <section id="home">
         <div id="hero">
             <h1></h1>
-            <p>Empowering learners with knowledge.</p>
+            <p>با اطمینان به ما هدف های خود برسید</p>
         </div>
     </section>
 
-    <section id="courses">
-        <h2>Available Courses</h2>
+    <section id="courses" class="course">
+        <h1 style="text-align: center;color: black">دوره های ما</h1>
+        <section class="course1">
         <div class="course">
-            <h3>Course 1: Subject Name</h3>
-            <p>Description of the course.</p>
+            <h2 class="h2s">دوره 1: پایتون</h2>
+            <p>Python and Django</p>
         </div>
+        </section>
+        <section class="course1">
         <div class="course">
-            <h3>Course 2: Subject Name</h3>
-            <p>Description of the course.</p>
+            <h2 class="h2s">دوره 2: سی شارپ</h2>
+            <p>C# and Asp.net</p>
         </div>
+        </section>
+        <section class="course1">
+        <div class="course">
+            <h2 class="h2s">دوره 3: وب</h2>
+            <p>Html,Css,JavaScript</p>
+        </div>
+        </section>
     </section>
     <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <section id="contact">
-        <div class="contact">
+        <div class="contact" id="contacts">
         <h1 id="h1co">تماس با ما</h1>
         <a href="t.me/Amk_Lotus" class="fa fa-telegram"></a>
         <a href="www.instagram.com/amirehsan_k" class="fa fa-instagram"></a>
         <address>
-            <a href="mailto:contact@yourwebsite.com">Amirehsan.Kohannasab@yahoo.com</a>: ایمیل<br>
-            Email: <a href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a><br>
-            Phone: +123-456-7890
+            <a href="mailto:Amirehsan.Kohannasab@yahoo.com">Amirehsan.Kohannasab@yahoo.com</a>: ایمیل<br>
+            تلفن: +989129312605
         </address>
     </div>
     </section>
@@ -93,8 +102,15 @@
             slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 5000); 
+        setTimeout(showSlides, 5000);
+        document.getElementById('coursebutton').addEventListener('click', function() {
+            document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.getElementById('contactbutton').addEventListener('click', function() {
+            document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
+        });
     }
+    
 </script>
 
 </html>
