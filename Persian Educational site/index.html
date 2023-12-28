@@ -6,26 +6,33 @@
     <title>Your Educational Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">صفحه اصلی</a></li>
-                <li><a id="coursebutton">دوره ها</a></li>
-                <li><a id="contactbutton">تماس با ما</a></li>
-            </ul>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/amirehsan_k-high-resolution-logo-black-transparent.png" alt="Your Logo" style="height: 60px;"> <!-- Update this line -->
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a id="contactbutton" class="headtext">تماس با ما</a></li>
+                    <li><a id="coursebutton" class="headtext">دوره ها</a></li>
+                    <li><a href="index.html" class="headtext">صفحه اصلی</a></li>
+
+                </ul>
+            </div>
         </nav>
     </header>
+    <!-- Mobile Navigation -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">صفحه اصلی</a></li>
+        <li><a id="coursebutton-mobile">دوره ها</a></li>
+        <li><a id="contactbutton-mobile">تماس با ما</a></li>
+    </ul>
 
     <section id="slideshow">
         <div class="slideshow-container">
-            <!-- <div class="mySlides fade">
-                <img src="images/page1.jpg" alt="Image 1">
-            </div>
-    
-            <div class="mySlides fade">
-                <img src="images/page2.jpg" alt="Image 2">
-            </div>-->
             <div class="mySlides fade">
                 <img src="images/Slider_Dsk_2_KGptTNQ.webp" alt="Image 2">
             </div>
@@ -38,44 +45,40 @@
     
     <section id="home">
         <div id="hero">
-            <h1></h1>
-            <p>با اطمینان به ما هدف های خود برسید</p>
         </div>
     </section>
 
-    <section id="courses" class="course">
-        <h1 style="text-align: center;color: black">دوره های ما</h1>
-        <section class="course1">
-        <div class="course">
-            <h2 class="h2s">دوره 1: پایتون</h2>
+    <section id="courses">
+        <h1 style="text-align: center; color: black">دوره های ما</h1>
+        <div class="course1">
+            <h2 class="h2s">دوره پایتون</h2>
+            <p>یادگیری برنامه‌نویسی پایتون با پروژه‌های عملی.</p>
             <p>Python and Django</p>
         </div>
-        </section>
-        <section class="course1">
-        <div class="course">
+        <div class="course1">
             <h2 class="h2s">دوره 2: سی شارپ</h2>
             <p>C# and Asp.net</p>
         </div>
-        </section>
-        <section class="course1">
-        <div class="course">
+        <div class="course1">
             <h2 class="h2s">دوره 3: وب</h2>
             <p>Html,Css,JavaScript</p>
         </div>
-        </section>
+    </section>
     </section>
     <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <section id="contact">
-        <div class="contact" id="contacts">
-        <h1 id="h1co">تماس با ما</h1>
-        <a href="t.me/Amk_Lotus" class="fa fa-telegram"></a>
-        <a href="www.instagram.com/amirehsan_k" class="fa fa-instagram"></a>
-        <address>
-            <a href="mailto:Amirehsan.Kohannasab@yahoo.com">Amirehsan.Kohannasab@yahoo.com</a>: ایمیل<br>
-            شماره تماس: +989129312605
-        </address>
-    </div>
+        <div class="contact-info">
+            <h1>تماس با ما</h1>
+            <div class="social-links">
+                <a href="t.me/Amk_Lotus" class="fa fa-telegram"></a>
+                <a href="www.instagram.com/amirehsan_k" class="fa fa-instagram"></a>
+            </div>
+            <address>
+                <a href="mailto:Amirehsan.Kohannasab@yahoo.com">Amirehsan.Kohannasab@yahoo.com</a>: ایمیل<br>
+                <span>شماره تماس: +989129312605</span>
+            </address>
+        </div>
     </section>
 
     <section id="filler">
@@ -87,31 +90,47 @@
         <p>&copy; designed by Amireshan Kohannasab</p>
     </footer>
 </body>
+
 <script>
+    // Function for the slideshow
     var slideIndex = 0;
     showSlides();
-
+    
     function showSlides() {
         var i;
         var slides = document.getElementsByClassName("mySlides");
         for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            slides[i].style.display = "none";  
         }
         slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 5000);
-        document.getElementById('coursebutton').addEventListener('click', function() {
-            document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
-        });
-        document.getElementById('contactbutton').addEventListener('click', function() {
-            document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
-        });
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
     
-</script>
-
+     // Smooth scroll for desktop nav
+     document.getElementById('coursebutton').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('contactbutton').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Mobile nav functionality
+    document.querySelector('.sidenav-trigger').addEventListener('click', toggleMobileNav);
+    function toggleMobileNav() {
+        var sidenav = document.getElementById('mobile-demo');
+        sidenav.style.width = sidenav.style.width === '250px' ? '0' : '250px';
+    }
+    
+    var mobileNavItems = document.querySelectorAll('.sidenav a');
+    mobileNavItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            document.getElementById('mobile-demo').style.width = '0';
+        });
+    });
+    </script>
 </html>
 
