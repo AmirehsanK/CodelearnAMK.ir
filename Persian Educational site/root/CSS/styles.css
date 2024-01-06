@@ -16,7 +16,7 @@ body {
 
 /* Header, Navigation, and Nav Link Styles */
 header {
-    background-color: #4c7fa7;
+    background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 0; /* Add padding for a bigger header */
 }
