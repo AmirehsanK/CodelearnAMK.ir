@@ -1,4 +1,4 @@
-/* Reset and basic global styles */
+/* basic global styles */
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
@@ -18,10 +18,8 @@ body {
 header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0; /* Add padding for a bigger header */
+    padding: 10px 0; 
 }
-
-/* ... existing styles ... */
 
 .nav-wrapper {
     max-width: 1200px;
@@ -29,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px; /* Add padding to ensure content is not flush against screen edges */
+    padding: 0 15px;
 }
 
 .brand-logo {
@@ -41,15 +39,14 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-left: auto; /* Ensures that the list is pushed to the right */
-    padding: 0; /* Removes any default padding */
+    margin-left: auto;
+    padding: 0; 
 }
 
 nav ul li {
-    padding: 0 15px; /* Adjust padding between links as needed */
+    padding: 0 15px; 
 }
 
-/* ... remaining styles ... */
 
 .headtext {
     padding: 10px 15px;
@@ -65,9 +62,6 @@ nav ul li {
     color: #0063B1;
 }
 
-/* Header, Navigation, and Nav Link Styles */
-
-
 /* Mobile Menu Styles */
 .sidenav-trigger {
     display: none;
@@ -75,12 +69,12 @@ nav ul li {
 /* Sidenav styles */
 .sidenav {
     height: 100%;
-    width: 0; /* Default state is closed */
+    width: 0; 
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fff; /* Whatever background color you prefer */
+    background-color: #fff; 
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -153,25 +147,7 @@ h2 {
     object-fit: cover;
 }
 
-/* Social media styles */
-.fa {
-    padding: 20px;
-    font-size: 2.5em;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    background: transparent;
-    color: #555;
-    transition: opacity 0.3s;
-}
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-/* Specific brand colors */
-.fa-instagram { background: #125688; color: white; }
-.fa-telegram { background: #0088cc; color: white; }
 
 
 /* Courses section styles */
@@ -184,29 +160,29 @@ h2 {
 .course1 {
     margin: 1rem auto;
     padding: 2rem;
-    background-color: #fff; /* White background for contrast */
-    border-left: 5px solid #0063B1; /* Colored border as an accent on the left */
-    border-radius: 8px; /* Rounded corners for a modern appearance */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-width: calc(100% - 4rem); /* Responsive max width */
-    transition: box-shadow 0.3s, transform 0.3s; /* Transitions for interactive hover effect */
+    background-color: #fff; 
+    border-left: 5px solid #0063B1; 
+    border-radius: 8px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+    max-width: calc(100% - 4rem); 
+    transition: box-shadow 0.3s, transform 0.3s; 
 }
 
 .course1:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover for a 'lifted' effect */
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); 
 }
 
 .course h2 {
-    color: #0063B1; /* Ensures titles match the site's theme */
-    font-size: 1.5rem; /* Emphasizes the title within the box */
-    margin-bottom: 0.5rem; /* Space below the title before the description */
+    color: #0063B1; 
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .course p {
-    color: #666; /* Provides good readability for text */
-    font-size: 1rem; /* Appropriate font size for body text */
-    margin-bottom: 1rem; /* Space below paragraphs for a clean separation */
+    color: #666; 
+    font-size: 1rem;
+    margin-bottom: 1rem; 
 }
 .images1 {
     display: -webkit-flex;
@@ -248,13 +224,13 @@ h2 {
     background-color: #0063B1;
     color: white;
   }
-/* ... other media query styles ... */
+
 /* Contact section styles */
 #contact {
     padding: 2rem;
-    color: #333333;
+    background-color: #f7f7f7; 
     text-align: center;
-    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact-info {
@@ -266,17 +242,41 @@ h2 {
     margin: auto;
     padding: 1.5rem;
     gap: 1rem;
+    background: #fff; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 10px;
 }
 
-.contact-info a {
-    color: #0063B1;
+/* Specific brand colors */
+.fa-instagram { background: #7a4777; color: white; }
+.fa-telegram { background: #0088cc; color: white; }
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 4rem; /* larger icons */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.contact-info address {
+    color: #333333;
+    margin-top: 1rem;
+}
+
+.contact-info address a {
+    color: #007bff;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
-.contact-info a:hover {
-    color: #004a87;
+.contact-info address a:hover {
+    color: #0056b3;
 }
-
 /* Footer styles */
 footer {
     background-color: #4c7fa7;
@@ -287,7 +287,7 @@ footer {
 
 
 
-/* Responsive styles for smaller devices */
+/* Responsive styles */
 @media (max-width: 768px) {
     .course1 {
         max-width: calc(100% - 2rem);
